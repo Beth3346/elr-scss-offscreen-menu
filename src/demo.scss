@@ -1,5 +1,6 @@
 @import "src/main";
 @import "elr-scss-reset/src/main";
+@import "elr-scss-config/src/main";
 
 @include elr-reset;
 
@@ -12,28 +13,28 @@
 .main-heading {
   font-size: 36px;
   font-weight: 700;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  border-bottom: $border;
+  padding-bottom: ($base-fontsize * 0.25);
+  margin-bottom: ($base-fontsize * 0.5);
   width: 100%;
 }
 
 .subheading {
-  font-size: 16px;
-  color: #666;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  font-size: $base-fontsize;
+  color: $primary-color;
+  padding-bottom: ($base-fontsize * 0.25);
+  margin-bottom: ($base-fontsize * 0.5);
   width: 100%;
 }
 
 .demo-content {
   position: relative;
-  padding: 20px 0;
+  padding: ($base-fontsize * 1.5) 0;
 }
 
 .offscreen-content-wrapper {
   height: 700px;
-  border: 1px solid #1976d2;
+  border: 1px solid $primary-color;
   position: relative;
   overflow: hidden;
 
@@ -44,24 +45,24 @@
   }
 
   button {
-    background-color: #1976d2;
-    color: #fff;
-    padding: 16px;
+    background-color: $primary-color;
+    color: $white;
+    padding: $base-fontsize;
     border: 0;
     box-shadow: none;
     cursor: pointer;
   }
 
   .page-content {
-    padding: 48px 24px;
+    padding: ($base-fontsize * 3.5) ($base-fontsize * 1.5);
 
     h2 {
-      font-size: 24px;
+      font-size: ($base-fontsize * 1.5);
     }
 
     p {
-      font-size: 16px;
-      padding: 8px 0;
+      font-size: $base-fontsize;
+      padding: ($base-fontsize * 0.5) 0;
     }
   }
 }
@@ -74,7 +75,7 @@
   transform: translateX(-100%);
   width: 250px;
   height: 100%;
-  background-color: #1976d2;
+  background-color: $primary-color;
   transition: transform ease-in-out 0.3s;
 
   &.active {
@@ -96,16 +97,16 @@
   }
 
   a {
-    padding: 8px 24px;
+    padding: ($base-fontsize * 0.5) ($base-fontsize * 1.5);
     text-decoration: none;
-    background-color: #1976d2;
-    color: #fff;
+    background-color: $primary-color;
+    color: $white;
     font-weight: 900;
     display: block;
     transition: 0.3s background-color;
 
     &:hover {
-      background-color: #f81190;
+      background-color: $secondary-color;
     }
   }
 }
